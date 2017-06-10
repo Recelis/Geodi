@@ -65,7 +65,7 @@ var dataStorage={
 }
 
 var menus = [
-  ["Promise", "#"],
+  ["My Promise", "#"],
   ["Gumption", "https://recelis.github.io/questionaire/"],
   ["Calendar","https://calendar.google.com/calendar/render#main_7"],
   ["Wikisearch","https://recelis.github.io/WikipediaViewer/"],
@@ -290,6 +290,7 @@ function aiControl(){
   function(){
     $(this).css("box-shadow", "0px 0px 0px #ff80c3");
   });
+
   document.getElementById('box').onclick = function(){
     if (clicked == false){
       clicked = true;
