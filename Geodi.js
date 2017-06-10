@@ -66,7 +66,7 @@ var dataStorage={
 
 var menus = [
   ["My Promise", "#"],
-  ["Gumption", "https://recelis.github.io/questionaire/"],
+  ["Gumption Tracker", "https://recelis.github.io/questionaire/"],
   ["Calendar","https://calendar.google.com/calendar/render#main_7"],
   ["Wikisearch","https://recelis.github.io/WikipediaViewer/"],
   ["Scorecard","#"],
