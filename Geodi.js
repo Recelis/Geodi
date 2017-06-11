@@ -8,18 +8,6 @@ api.openweathermap.org/data/2.5/weather?q={city name},{country code}
  */
 
 var content = {
-    manifesto:"My Manifesto\
-    Today, I swear to not see the world as I want it to be, but accept it as it is.\
-    I promise to always learn about the world and to learn to become better.\
-    I promise to remove all of my vices.\
-    I promise to seek positive snowballs, so that my well-being increases exponentially.\
-    I promise to dream big.\
-    I promise to always be optimistic about the future.\
-    I promise to help people achieve what they truly desire.\
-    I promise that my actions be kind, caring, virtuous, and of a great man.\
-    I must always have conviction in my actions.\
-    I promise to work towards a life where I do what I want but not just what I want." +  
-    "I promise to always move forward and look at the bigger picture.",
     weather:{
       clear:"http://lookingtothesky.com/wp-content/uploads/2011/02/Blue-Sky.jpg",
       clouds:"https://w-dog.net/wallpapers/10/17/335596661241855/nature-sea-water-night-sunset-sky-clouds-sea-sunset-sky-background-wallpaper-widescreen-full-screen-widescreen-hd-wallpapers-background-wallpaper.jpg",
@@ -65,7 +53,7 @@ var dataStorage={
 }
 
 var menus = [
-  ["My Promise", "#"],
+  ["My Promise", "https://vast-chamber-60656.herokuapp.com/"],
   ["Gumption Tracker", "https://recelis.github.io/questionaire/"],
   ["Calendar","https://calendar.google.com/calendar/render#main_7"],
   ["Wikisearch","https://recelis.github.io/WikipediaViewer/"],
@@ -204,7 +192,7 @@ function convertDayToText(day){
     case 6:
       textDay = 'Sat';
       break;
-    case 7:
+    case 0:
       textDay = 'Sun';
       break;
   }
