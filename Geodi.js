@@ -53,7 +53,7 @@ var dataStorage={
 }
 
 var menus = [
-  ["My Promise", "https://vast-chamber-60656.herokuapp.com/"],
+  ["My Promise", "https://protected-basin-62209.herokuapp.com/"],
   ["Gumption Tracker", "https://recelis.github.io/questionaire/"],
   ["Calendar","https://calendar.google.com/calendar/render#main_7"],
   ["Wikisearch","https://recelis.github.io/WikipediaViewer/"],
