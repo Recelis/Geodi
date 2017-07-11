@@ -6,7 +6,7 @@ api.openweathermap.org/data/2.5/weather?q={city name},{country code}
  997b12fce3184c02353654296fdb1df5 weather key
  
  */
-
+var goToSleepSound = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound3.mp3');
 var content = {
     weather:{
       clear:"http://lookingtothesky.com/wp-content/uploads/2011/02/Blue-Sky.jpg",
@@ -268,7 +268,10 @@ function aiOn(){
   else if (hour >= 12 && hour < 18) greeting.innerHTML = content.chat.afternoon;
   else if (hour >= 18 && hour < 22) greeting.innerHTML = content.chat.evening;
   else if (hour == 22) greeting.innerHTML = content.chat.sleep;
-  else greeting.innerHTML = content.chat.sleep2;  
+  else {
+    goToSleepSound.play();
+    greeting.innerHTML = content.chat.sleep2;
+  }  
 }
 
 function aiControl(){
