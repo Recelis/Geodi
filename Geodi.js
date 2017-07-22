@@ -53,15 +53,11 @@ var dataStorage={
 }
 
 var menus = [
-  ["My Promise", "https://protected-basin-62209.herokuapp.com/"],
   ["Gumption Tracker", "https://recelis.github.io/questionaire/"],
   ["Calendar","https://calendar.google.com/calendar/render#main_7"],
   ["Wikisearch","https://recelis.github.io/WikipediaViewer/"],
-  ["Scorecard","#"],
   ["Pomodoro"," https://recelis.github.io/pomodoro/"],
-  ["News",""],
   ["Portfolio","https://recelis.github.io/Portfolio/"],
-  ["Emissions Calculator","#"],
 ]
 
 
