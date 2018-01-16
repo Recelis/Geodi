@@ -69,6 +69,7 @@ li {
     background-color:#0d0316;
     opacity:0.9;
     width:30%;
+    border:solid transparent;
     border-radius:30px;
     }
 
@@ -89,6 +90,7 @@ li {
     -o-transform: rotate(60deg);
     -ms-transform: rotate(60deg);
     transform: rotate(60deg);
+    border:solid transparent;
     border-radius:30px;
 }
 
@@ -109,6 +111,7 @@ li {
     -o-transform: rotate(120deg);
     -ms-transform: rotate(120deg);
     transform: rotate(120deg);
+    border:solid transparent;
     border-radius:30px;
 }
 
@@ -129,6 +132,7 @@ li {
     -o-transform: rotate(150deg);
     -ms-transform: rotate(150deg);
     transform: rotate(150deg);
+    border:solid transparent;
     border-radius:30px;
 }
 
@@ -149,6 +153,7 @@ li {
     -o-transform: rotate(210deg);
     -ms-transform: rotate(210deg);
     transform: rotate(210deg);
+    border:solid transparent;
     border-radius:30px;
 }
 

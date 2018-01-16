@@ -5,6 +5,10 @@
 api.openweathermap.org/data/2.5/weather?q={city name},{country code} 
  997b12fce3184c02353654296fdb1df5 weather key
  
+
+ https://fcc-weather-api.glitch.me/
+ route: /api/current?lon=:longitude&lat=:latitude
+
  */
 var goToSleepSound = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound3.mp3');
 var content = {
@@ -205,7 +209,7 @@ function updateWeather(){
     success: function(data){
       dataStorage.city = data["city"];
       dataStorage.country = data["country_name"];
-      dataStorage.location = dataStorage.city + ", " +dataStorage.country; 
+      dataStorage.location = dataStorage.city + ", " +dataStorage.country;
       getWeatherData(data); // update weather
     }
   });
@@ -214,12 +218,12 @@ function updateWeather(){
 
 
  function getWeatherData(dataLoc){
-   var url = "http://api.openweathermap.org/data/2.5/weather?lat=" +dataLoc["latitude"] + "&lon=" + dataLoc["longitude"] + "&APPID=997b12fce3184c02353654296fdb1df5";
+   var url = "https://fcc-weather-api.glitch.me/api/current?lat=" +dataLoc["latitude"] + "&lon=" + dataLoc["longitude"];
    $.ajax({
      type: "GET",
      url: url,
      success: function(data){
-       temperature = Math.floor(data["main"]["temp"] -272.150);
+       temperature = Math.floor(data["main"]["temp"]);
        dataStorage.temperature = temperature;
        dataStorage.humidity = data["main"]["humidity"];
        dataStorage.weather = data["weather"][0]["description"];
