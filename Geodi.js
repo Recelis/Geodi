@@ -164,11 +164,15 @@ function getDateTime(){
     var second = currentDate.getSeconds();
     var day = convertDayToText(currentDate.getUTCDay());
     var date = currentDate.getDate();
-    var month = currentDate.getMonth();
+    var month = currentDate.getMonth()+1;
     var year = currentDate.getFullYear();
-    dataStorage.time = hour + ":" + minute + ":" + second;
-    dataStorage.date = day + ", " +date+"/"+ month + "/" + year;
+    dataStorage.time = zeroFill(hour) + ":" + zeroFill(minute) + ":" + zeroFill(second);
+    dataStorage.date = day + ", "+ zeroFill(date)+"/"+ zeroFill(month) + "/" + year;
     dataStorage.dateTime = currentDate;
+}
+
+function zeroFill(ii){
+  return(ii<10?'0':'')+ii;
 }
 
 function convertDayToText(day){
@@ -227,15 +231,6 @@ function updateWeather(){
        dataStorage.temperature = temperature;
        dataStorage.humidity = data["main"]["humidity"];
        dataStorage.weather = data["weather"][0]["description"];
-      // $(".toggle").click(function(){
-      //   if (celsius == true){
-      //     celsius = false;
-      //     $(".toggle").html(Math.floor((temperature+32)*9/5)+ "&deg F");
-      //   } else{
-      //     celsius = true;
-      //     $(".toggle").html(temperature+ "&deg C");
-      //   } 
-      // });
      },
      error:function(exception){console.log(exception);}
    });
@@ -247,7 +242,7 @@ function updateAll(){
   getDateTime();
   for (var ii =0; ii < content.startUp.length; ii++){
     newText = dataStorage[content.startUp[ii][0]];
-    if (content.startUp[ii][0] === 'temperature') newText += 'C';
+    if (content.startUp[ii][0] === 'temperature') newText += '&deg;C';
     if (content.startUp[ii][0] === 'humidity') newText += '%';
     $('#'+content.startUp[ii][0]).html(newText);
   }
