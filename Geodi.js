@@ -162,7 +162,7 @@ function getDateTime(){
     var hour = currentDate.getHours();
     var minute = currentDate.getMinutes();
     var second = currentDate.getSeconds();
-    var day = convertDayToText(currentDate.getUTCDay());
+    var day = convertDayToText(currentDate.getDay());
     var date = currentDate.getDate();
     var month = currentDate.getMonth()+1;
     var year = currentDate.getFullYear();
